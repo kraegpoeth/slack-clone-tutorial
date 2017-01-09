@@ -24,3 +24,7 @@ anti:fake
 dburles:factory
 underscore
 msavin:mongol
+accounts-password
+accounts-ui
+accounts-base
+accounts-github
