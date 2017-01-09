@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
-import { Messages } from '../api/messages.js';
 
 import './messages.js';
 import './footer.js';
+import '../startup/client/accounts-config.js';
 
 import './room.html';
 
