@@ -8,16 +8,8 @@ Meteor.methods({
      message.createdAt = Date.now();
      message.user = Meteor.userId();
      message.username = Meteor.user().username;
-  //   message.channel = Session.get("channel");
      Messages.insert(message);
   },
-  /*
-  newChannel:function(channel){
-    channel.createdAt = Date.now();
-    channel.owner = Meteor.userId();
-    Channels.insert(channel);
-  },
-  */
   'newChannel'(name) {
     //check(name, String);
     //make sure the user is lgged in fefore inserting a task

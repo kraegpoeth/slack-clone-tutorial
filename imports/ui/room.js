@@ -16,9 +16,4 @@ import './room.html';
 
 Template.room.onCreated(function() {
   Meteor.subscribe("channels");
-  console.log('hej');
-});
-Meteor.startup(function(){
-    Session.set("channel", 'general');
-
 });

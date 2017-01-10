@@ -27,3 +27,5 @@ accounts-ui
 accounts-base
 accounts-github
 momentjs:moment
+kadira:flow-router
+kadira:blaze-layout

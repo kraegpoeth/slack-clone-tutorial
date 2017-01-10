@@ -24,11 +24,3 @@ Template.listings.helpers({
     }
   }
 });
-
-
-Template.listings.events({
-  "click .channel": function(e){
-    Session.set('channel', this.name);
-    console.log(Session.get("channel"));
-  }
-});

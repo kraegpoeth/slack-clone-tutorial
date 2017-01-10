@@ -7,6 +7,9 @@ Template.newChannel.events({
   "focus .newChannelName": function(e){
     e.target.value = '';
   },
+  "blur .newChannelName": function(e){
+    e.target.value = 'Create New Channel';
+  },
   "submit .createNewChannel": function(e) {
 
     e.preventDefault();
@@ -18,5 +21,6 @@ Template.newChannel.events({
     e.target.newChannelName.blur();
 
     Session.set("channel", name);
+    FlowRouter.setParams({channel: name})
   }
 });

@@ -103,7 +103,7 @@ body {
 
 /* line 35, ../tests/sass/_layout.scss */
 .footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   height: 64px;
@@ -145,6 +145,7 @@ body {
 
 /* line 1, ../tests/sass/components/_main.scss */
 .listings {
+  position: fixed;
   height: 100%;
   width: 220px;
   float: left;
@@ -215,7 +216,28 @@ body {
   color: #ffffff;
   padding-left: 1rem;
 }
-
+.channel_name {
+  text-decoration: none;
+  color: inherit;
+}
+.newChannelName {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-style: italic;
+  font: 2rem;
+  height: 24px;
+  line-height: 24px;
+  -moz-border-radius-topright: 0.25rem;
+  -webkit-border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -moz-border-radius-bottomright: 0.25rem;
+  -webkit-border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.login {
+  padding: 5px 0px 0px 10px
+}
 .online {
   border: 0;
   border-radius: 10px;
@@ -245,24 +267,6 @@ body {
   padding: 4px;
   display: inline-block;
   margin: 0px;
-}
-.newChannelName {
-  border: none;
-  background-color: transparent;
-  color: white;
-  font-style: italic;
-  font: 2rem;
-  height: 24px;
-  line-height: 24px;
-  -moz-border-radius-topright: 0.25rem;
-  -webkit-border-top-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  -moz-border-radius-bottomright: 0.25rem;
-  -webkit-border-bottom-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-.login {
-  text-align: right;
 }
 /* line 35, ../tests/sass/components/_listings.scss */
 .unread {
@@ -407,6 +411,7 @@ body {
 .input-box {
   height: 100%;
   margin-left: 220px;
+
 }
 
 /* line 6, ../tests/sass/components/_input-box.scss */
