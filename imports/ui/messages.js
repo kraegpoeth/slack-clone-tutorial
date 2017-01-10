@@ -5,8 +5,9 @@ import { moment } from 'meteor/momentjs:moment';
 
 import { Messages } from '../api/messages.js';
 
-import './message.html';
+//import '../api/server/publications.js';
 
+import './message.html';
 import './messages.html';
 
 
@@ -21,3 +22,5 @@ Template.messages.helpers({
 Template.registerHelper("timeFormatted", function(createdAt){
   return moment(createdAt).format('HH:mm:ss')
 });
+
+Meteor.subscribe("messages");
