@@ -1,15 +1,15 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import { Accounts } from 'meteor/accounts-base';
-import { moment } from 'meteor/momentjs:moment';
 
 import { Messages } from '../api/messages.js';
-
-//import '../api/server/publications.js';
 
 import './message.html';
 import './messages.html';
 
+
+Template.messages.onCreated(function() {
+  Meteor.subscribe("messages");
+});
 
 
 Template.messages.helpers({
@@ -17,10 +17,3 @@ Template.messages.helpers({
      return Messages.find({});
   },
 });
-
-
-Template.registerHelper("timeFormatted", function(createdAt){
-  return moment(createdAt).format('HH:mm:ss')
-});
-
-Meteor.subscribe("messages");

@@ -16,13 +16,7 @@ Template.footer.events({
           e.stopPropagation();
 
           check(inputVal, String);
-          Messages.insert({
-            text: inputVal,
-            user: Meteor.userId(),
-            username: Meteor.user().username,
-            createdAt: Date.now()
-          });
-
+          Meteor.call("newMessage", {text: inputVal});
 
           $('.input-box_text').val("");
           return false;
