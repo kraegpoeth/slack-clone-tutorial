@@ -5,6 +5,9 @@ import { Session } from 'meteor/session';
 import { Channels } from '../api/channels.js';
 
 import './listings.html';
+import './channel.html';
+import './newChannel.js';
+
 
 
 
@@ -25,6 +28,7 @@ Template.listings.helpers({
 
 Template.listings.events({
   "click .channel": function(e){
-     Session.set('channel', this.name);
+    Session.set('channel', this.name);
+    console.log(Session.get("channel"));
   }
 });

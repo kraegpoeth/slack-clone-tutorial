@@ -202,6 +202,35 @@ body {
   color: #ffffff;
   padding-left: 1rem;
 }
+.new-channel {
+  height: 24px;
+  line-height: 24px;
+  -moz-border-radius-topright: 0.25rem;
+  -webkit-border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -moz-border-radius-bottomright: 0.25rem;
+  -webkit-border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  margin-right: 17px;
+  color: #ffffff;
+  padding-left: 1rem;
+}
+
+.newChannelName {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-style: italic;
+  font: 2rem;
+  height: 24px;
+  line-height: 24px;
+  -moz-border-radius-topright: 0.25rem;
+  -webkit-border-top-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  -moz-border-radius-bottomright: 0.25rem;
+  -webkit-border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
 
 /* line 35, ../tests/sass/components/_listings.scss */
 .unread {
