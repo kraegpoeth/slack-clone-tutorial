@@ -19,6 +19,7 @@ Template.messages.onCreated(function() {
 
 Template.messages.helpers({
   messages: function(){
-     return Messages.find({});
+    $('.message-history').scrollTop($('.message-history').prop('scrollHeight'));
+     return Messages.find({}, {sort: { createdAt: 1}});
   },
 });

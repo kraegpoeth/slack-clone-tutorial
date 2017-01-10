@@ -85,6 +85,7 @@ body {
   margin: 0;
   padding-top: 53px;
   padding-bottom: 64px;
+
 }
 
 /* line 23, ../tests/sass/_layout.scss */
@@ -94,6 +95,8 @@ body {
   left: 0;
   height: 53px;
   width: 100%;
+  z-index: 100;
+  background: linear-gradient(white 85%, transparent);
 }
 
 /* line 31, ../tests/sass/_layout.scss */
@@ -157,10 +160,14 @@ body {
 
 /* line 11, ../tests/sass/components/_main.scss */
 .message-history {
+  position: absolute;
   margin-left: 220px;
+  bottom: 1px;
+  margin-bottom: 55px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
+
+
   padding: 0 18px 1rem 1.5rem;
 }
 
