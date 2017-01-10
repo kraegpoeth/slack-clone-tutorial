@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
 
 import { Messages } from '../api/messages.js';
 
@@ -8,7 +9,11 @@ import './messages.html';
 
 
 Template.messages.onCreated(function() {
-  Meteor.subscribe("messages");
+  Tracker.autorun(function(){
+     Meteor.subscribe("messages", Session.get('channel'));
+  });
+
+
 });
 
 

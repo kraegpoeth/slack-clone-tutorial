@@ -1,6 +1,7 @@
 import { Template } from 'meteor/templating';
 import { check } from 'meteor/check';
 import { Accounts } from 'meteor/accounts-base';
+import { Session } from 'meteor/session';
 
 import { Messages } from '../api/messages.js';
 
@@ -16,7 +17,11 @@ Template.footer.events({
           e.stopPropagation();
 
           check(inputVal, String);
-          Meteor.call("newMessage", {text: inputVal});
+          Meteor.call("newMessage", {
+            text: inputVal,
+            channel: Session.get('channel')
+
+          });
 
           $('.input-box_text').val("");
           return false;
