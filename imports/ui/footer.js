@@ -29,3 +29,15 @@ Template.footer.events({
       }
   }
 });
+
+Template.footer.helpers({
+  connectionStatus() {
+    if (!!Meteor.userId()) {
+      return 'online'
+    } if (!Meteor.userId()) {
+      return 'offline'
+    } else {
+      return 'pending'
+    }
+  }
+});

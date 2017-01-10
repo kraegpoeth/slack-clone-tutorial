@@ -13,7 +13,6 @@ import './listings.js';
 import './header.js';
 
 import './room.html';
-import './channel.html';
 
 Template.room.onCreated(function() {
   Meteor.subscribe("channels");

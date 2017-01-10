@@ -1,7 +1,10 @@
 <template name="listings">
   <div class="listings">
     <div class="listings-channel">
+      <h2 class="listings-header">{{> loginButtons }}</h2>
+      <br />
       <h2 class="listings-header">Channels</h2>
+
       <ul class="channel_list">
         {{#each channels}}
           <li class="channel {{active}}">
