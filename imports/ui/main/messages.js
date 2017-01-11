@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
-import { Messages } from '../api/messages.js';
+import { Messages } from '../../api/messages.js';
 
 import './message.html';
 import './messages.html';

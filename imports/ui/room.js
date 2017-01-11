@@ -5,12 +5,12 @@ import { Session } from 'meteor/session';
 import { Channels } from '../api/channels.js'
 
 
-import './messages.js';
-import './footer.js';
+import './main/messages.js';
+import './footer/footer.js';
 import '../startup/client/accounts-config.js';
 import '../stubs/globalHelpers.js';
-import './listings.js';
-import './header.js';
+import './side/listings.js';
+import './header/header.js';
 
 import './room.html';
 

@@ -3,9 +3,9 @@ import { check } from 'meteor/check';
 import { Accounts } from 'meteor/accounts-base';
 import { Session } from 'meteor/session';
 
-import { Messages } from '../api/messages.js';
+import { Messages } from '../../api/messages.js';
 
-import './footer.html'
+import './footer.html';
 
 
 Template.footer.events({
