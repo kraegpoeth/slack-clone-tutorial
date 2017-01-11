@@ -7,6 +7,8 @@ import { Messages } from '../../api/messages.js';
 import { Channels } from '../../api/channels.js';
 
 Meteor.startup(function(){
+
+
   //define fake messages
   Factory.define('message', Messages, {
     text: function() {
@@ -15,7 +17,7 @@ Meteor.startup(function(){
     username: function() {
       return Fake.word();
     },
-    user: Meteor.users.findOne()._id,
+    username: 'Anonymous',
     createdAt: Date.now(),
     channel: 'general'
   });

@@ -5,15 +5,22 @@ import { Channels } from './channels.js';
 
 Meteor.methods({
   newMessage:function(message){
-     message.createdAt = Date.now();
-     message.user = Meteor.userId();
-     message.username = Meteor.user().username;
+    message.user = 'Anonymous';
+    message.username = 'Anonymous';
+    message.createdAt = Date.now();
+
+    if (Meteor.userId()) {
+      message.user = Meteor.userId();
+      message.username = Meteor.user().username;
+    }
+
+
      Messages.insert(message);
   },
   'newChannel'(name) {
     //check(name, String);
     //make sure the user is lgged in fefore inserting a task
-    if (! this.userId) {
+    if (!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
     if (name !== ''){

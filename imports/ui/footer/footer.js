@@ -9,6 +9,7 @@ import './footer.html';
 
 
 Template.footer.events({
+  /*
   "keypress input": function(e){
       let inputVal = $('.input-box_text').val();
       if (!!inputVal) {
@@ -27,6 +28,37 @@ Template.footer.events({
           return false;
         }
       }
+  },*/
+  "submit .input-box":function(e){
+    e.preventDefault();
+    let inputVal = e.target.text.value;
+    /*
+    if (!Meteor.user) {
+      const username = 'Anonymous';
+      const user = 'Anonymous';
+
+      check(inputVal, String);
+      Meteor.call("newMessage", {
+        text: inputVal,
+        channel: Session.get('channel'),
+        user: user,
+        username: username
+      });
+
+      inputVal = '';
+
+      return false;
+    }
+    */
+    if (!!inputVal) {
+      check(inputVal, String);
+      Meteor.call("newMessage", {
+        text: inputVal,
+        channel: Session.get('channel')
+      });
+
+      e.target.text.value = '';
+    }
   }
 });
 
